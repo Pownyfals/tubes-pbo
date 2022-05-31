@@ -13,13 +13,15 @@ public class UploadReferensi {
     String penerbit;
     int noJurnal;
     int pilihan1;
-    ArrayList<referensi> Lbuku = new ArrayList<referensi>();
-    ArrayList<referensi> Ljurnal = new ArrayList<referensi>();
-    private HashMap<String,ArrayList<referensi>> dataBase = new HashMap<>();
+
+    private static ArrayList<referensi> Lbuku = new ArrayList<referensi>();
+    private static ArrayList<referensi> Ljurnal = new ArrayList<referensi>();
+
+    private static HashMap<String,ArrayList<referensi>> dataBase = new HashMap<>();
 
     enum State{Upload, Buku, Jurnal, Exit};
 
-    public HashMap getDatabase(){
+    public HashMap<String,ArrayList<referensi>> getDatabase(){
         return dataBase;
     }
     
